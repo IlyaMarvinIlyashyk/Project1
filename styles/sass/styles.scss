@@ -1,0 +1,44 @@
+@import "./partials/setup";
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/tepography";
+@import "./partials/homeStyles";
+@import "./partials/aboutStyles";
+@import "./partials/blogStyles";
+@import "./partials/contactStyles";
+
+
+@media (max-width: 1000px) {
+
+    .homeTitleImg img {
+        width: 65%;
+        width: calc(10rem + 15vw);
+    }
+
+}
+
+@media (max-width: 790px) {
+
+    .homeTitle .homeHeroTitle { 
+    
+        img {
+            width: calc(4rem + 3vw);
+            position: relative;
+            left: 10%;
+            bottom: 2%;
+        }
+    
+    
+        h1 {
+        font-size: calc(4rem + 4vw);
+        }
+    }
+}
+
+@media (max-width: 630px) {
+
+}
+
+
+
+

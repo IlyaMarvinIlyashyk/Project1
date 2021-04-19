@@ -1,0 +1,219 @@
+// GENERAL
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+header {
+    margin-top: 3%;
+}
+
+body {
+    font-family: $primaryFont;
+    @include colors ($white, $black);
+    font-size: calc(1rem + 0.75vw);
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    @include fontStyles (1px, 29px);
+    transition: color 0.3s ease;
+}
+  
+.wrapper {
+    margin: 0 auto;
+    max-width: 1680px;
+    width: 85%;
+}
+
+button,
+.homeMainAnchor {
+    font-family: $primaryFont;
+    @include fontStyles (1px, 32px);
+    @include colors ($highlightOrange, $black);
+    border: none;
+    margin-top: 1vw;
+    padding: 15px 25px;
+    display: inline-block;
+    transition: color, background-color 0.3s ease;
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        @include colors ($black, $highlightOrange);
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+h2 {
+    @include fontStyles (1, x, calc(2.5rem + 1vw));
+}
+
+h3,
+.homeSummary a {
+    @include fontStyles (1, x, calc(2rem + 0.75vw));
+}
+
+h4 {
+    @include fontStyles (1, x, calc(2rem + 0.5vw));
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+a.homeMainAnchor,
+.logo,
+.mainNav a {
+    text-transform: uppercase;
+}
+
+p {
+    @include fontStyles (0, 40px);
+}
+
+.mainNav a,
+p {
+    font-family: $secondaryFont;
+}
+
+::placeholder {
+    opacity: 1;
+    font-family: $secondaryFont;
+}
+
+// NAV
+
+.mainNav {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    @include colors ($primaryGreen, $white);
+
+    ul {
+        @include flex (center, center);
+
+        li {
+            padding: 15px 30px;
+            align-self: center;
+        }
+
+        .logo {
+            font-size: calc(2.25rem + 1vw);
+        }
+    }
+}
+
+.mainNav a {
+    color: $white;
+    font-weight: bold;
+    &:hover,
+    &:focus {
+        color: $highlightOrange;   
+    }
+}
+
+// HEADER - (NOT THE HOME PAGE)
+
+.aboutHeader,
+.blogHeader,
+.contactHeader {
+    height: 50vh;
+    background-size: cover;
+
+    h1 {
+        display: flex;
+        height: 52vh;
+        align-items: flex-end;
+        color: $whiteShade;
+        @include fontStyles (1, x, calc(5rem + 2vw));
+    }
+}
+
+// GENERAL BODY - (NOT THE HOME PAGE)
+
+.blog,
+.contact,
+.about {
+    background-color: $whiteShade;
+}
+
+.blogMain,
+.contactMain {
+    display: flex;
+    padding: 5% 0;
+}
+
+.blogMainText > *,
+.blogMainAside > *,
+.contactMainAside > *,
+.contactMainForm > * {
+    background: $white;
+}
+
+// FORM
+
+.blogMainForm,
+.contactMainForm {
+    background: $whiteShade;
+
+    .nameEmail {
+        background: $whiteShade;
+        @include flex (space-between, x);
+
+        input[type=text],
+        input[type=email] {
+            width: 49%;
+        }
+    }
+
+    .comment,
+    .message  {
+        margin-bottom: 0;
+        background: $white;
+
+        textarea {
+            resize: none;
+            width: 100%;
+        }
+    }
+
+    button {
+        width: 100%;
+        background: $highlightOrange;
+        &:hover,
+        &:focus {
+            background-color: $black;
+        }
+    }
+}
+
+// FOOTER
+
+footer {
+    @include colors ($black, $whiteShade);
+    text-align: center;
+    p {
+        margin: 0;
+    }
+}

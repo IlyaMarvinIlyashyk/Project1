@@ -1,0 +1,104 @@
+// BLOG: HEADER
+
+.blogHeader {
+    background-image: url(../assets/blog-image-1.jpg);
+}
+
+// BLOG: MAIN-SECTION
+
+.blogMainAside {
+    flex-basis: 30%;
+    margin-right: 2.5%;
+
+    & > * {
+        margin-bottom: 7%;
+        padding: 10%;
+            
+        .aboutWillowImg {
+            width: 100%;
+        }
+
+        .aboutWillowText {
+            padding-top: 7%;
+
+            p {
+                margin: 0;
+                padding-top: 5%;
+            }
+        }
+    }
+}
+
+.aboutWillowText a {
+    display: inline-block;
+    color: $secondaryGreen;
+    font-weight: bold;
+    letter-spacing: 0;
+
+    &:hover,
+    &:focus {
+        color: $primaryGreen;
+        text-decoration: underline;
+    }
+}
+
+.recentPosts ul li{
+    padding-left: 3%;
+
+    p {
+        margin: 1%;
+    }
+
+    p::before {
+        content: "•";
+        padding-right: 7%;
+    }
+
+    &:first-of-type p:first-of-type {
+        margin-top: 7%;
+    }
+}
+
+.blogMainText {
+    flex-basis: 70%;
+
+    .blogMainArticle {
+        padding: 4%;
+        border-bottom: 1rem $secondaryGreen solid;
+        margin-bottom: 3%;
+    }
+}
+
+.blogMainComment {
+    display: flex;
+    justify-content: space-between;
+    padding: 4%;
+    margin-bottom: 3%;
+
+    &:last-of-type {
+        border-bottom: 1rem $secondaryGreen solid;
+    }
+
+    .blogMainCommentImg {
+        width: 375px;
+        padding-right: 2%;
+    }
+
+    .blogMainCommentText p {
+        margin: 0;
+    }
+}
+
+// BLOG: FORM
+
+.blogMainForm {
+
+    & > * {
+        margin: 3% auto;
+
+        & > * {
+            padding: 2rem 3rem;
+            border: none;
+        }
+    }
+}

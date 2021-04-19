@@ -1,0 +1,16 @@
+@mixin fontStyles ($letterSpacing, $lineHeight: 20%, $fontSize:calc(1rem + 0.75vw)) {
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+    font-size: $fontSize;
+}
+
+@mixin colors ($background, $color) {
+    background: $background;
+    color: $color;    
+}
+
+@mixin flex ($justify-content, $align-content) {
+    display: flex;
+    justify-content: $justify-content;
+    align-content: $align-content;
+}

@@ -13,7 +13,10 @@
     & > * {
         margin-bottom: 7%;
         padding: 10%;
-            
+    }            
+    
+    .aboutWillow {
+    
         .aboutWillowImg {
             width: 100%;
         }
@@ -29,6 +32,7 @@
     }
 }
 
+
 .aboutWillowText a {
     display: inline-block;
     color: $secondaryGreen;
@@ -43,20 +47,28 @@
 }
 
 .recentPosts ul li{
-    padding-left: 3%;
+    padding: 1% 0 1% 3%;
 
-    p {
-        margin: 1%;
+    &:first-of-type {
+        padding-top: 9%;
     }
 
-    p::before {
+    a {
+        margin: 1%;
+        color: $black;
+        font-family: $secondaryFont;
+
+        &:hover,
+        &:focus {
+            color: $highlightOrange;
+        }
+    }
+
+    a::before {
         content: "•";
         padding-right: 7%;
     }
 
-    &:first-of-type p:first-of-type {
-        margin-top: 7%;
-    }
 }
 
 .blogMainText {

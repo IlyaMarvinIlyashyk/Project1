@@ -46,7 +46,7 @@ button,
     @include colors ($highlightOrange, $black);
     border: none;
     margin-top: 1vw;
-    padding: 15px 25px;
+    padding: 1.5rem 2.5rem;
     display: inline-block;
     transition: color, background-color 0.3s ease;
     &:hover,
@@ -88,7 +88,7 @@ a.homeMainAnchor,
 }
 
 p {
-    @include fontStyles (0, 40px);
+    @include fontStyles (0, 4rem);
 }
 
 .mainNav a,
@@ -108,28 +108,123 @@ p {
     z-index: 1;
     width: 100%;
     top: 0;
-    @include colors ($primaryGreen, $white);
+    @include colors ($primaryGreen, $whiteShade);
+
+    .hamburgerMenu,
+    .toggleLabel {
+        display: none;
+    }
 
     ul {
         @include flex (center, center);
 
         li {
-            padding: 15px 30px;
+            padding: 1.5rem 3rem;
             align-self: center;
         }
 
         .logo {
             font-size: calc(2.25rem + 1vw);
         }
+
+        img {
+            display: none;
+        }
     }
 }
 
 .mainNav a {
-    color: $white;
+    color: $whiteShade;
     font-weight: bold;
     &:hover,
     &:focus {
         color: $highlightOrange;   
+    }
+}
+
+// NAV: MEDIA QUERIES
+
+@media (max-width: 790px) {
+
+    header {
+        margin: 0;
+    }
+
+    .mainNav {
+        position: static;
+        display: flex;
+        background-color: $secondaryGreen;
+        
+        
+        .hamburgerMenu {
+            display: inline-block;
+            position: relative;
+            width: 6rem;
+            height: 6rem;
+            top: 2%;
+            left: 2%;
+            opacity: 0;
+            z-index: 1;
+            cursor: pointer;
+        }
+        
+        ul {
+            display: none;
+        }
+            
+        .toggleLabel {
+            display: inline-block;
+            position: absolute;
+            font-size: 3rem;
+            top: 1.5rem;
+            left: 2rem;
+        }
+
+        .hamburgerMenu:checked ~ ul {
+            display: inline-block;
+            position: relative;
+                
+            li {
+                padding: 1rem 2rem;
+            }
+
+            li:nth-of-type(3) {
+                position: absolute;
+                top: 4.5rem;
+                left: calc(1rem + 25vw);
+                    
+                .logo {
+                    font-size: calc(4rem + 4vw);
+                }
+
+                img {
+                    display: block;
+                    position: absolute;
+                    width: 20%;
+                    top: 3%;
+                    left: -1%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 615px) {
+
+    .mainNav {
+        display: block;
+        
+        .hamburgerMenu:checked ~ ul {
+                display: inline;
+
+            li:nth-of-type(3) {
+                left: calc(1rem + 10vw);
+                    
+                .logo {
+                    font-size: calc(2.5rem + 6vw);
+                }
+            }
+        }
     }
 }
 
@@ -140,15 +235,19 @@ p {
 .contactHeader {
     height: 50vh;
     background-size: cover;
-
-    h1 {
-        display: flex;
-        height: 52vh;
-        align-items: flex-end;
-        color: $whiteShade;
-        @include fontStyles (1, x, calc(5rem + 2vw));
-    }
+    position: relative;
 }
+
+.aboutHeader h1,
+.blogHeader h1,
+.contactHeader h1 {
+    position: absolute;
+    bottom: -1.7rem;
+    left: 7%;
+    color: $whiteShade;
+    @include fontStyles (1, x, calc(5rem + 2vw));
+}
+
 
 // GENERAL BODY - (NOT THE HOME PAGE)
 

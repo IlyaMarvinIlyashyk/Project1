@@ -80,7 +80,6 @@
     background-color: $secondaryGreen;
 
     img {
-        box-shadow: 1vw 1vw $secondaryGreen;
         position: relative;
         bottom: 1vw;
         right: 1vw;
@@ -178,7 +177,7 @@
     .fas {
         background-color: $highlightOrange;
         padding: 1rem;
-        width: 6rem;
+        width: calc(4rem + 1vw);
         border-radius: 50%;
         margin-right: 2%;
     }

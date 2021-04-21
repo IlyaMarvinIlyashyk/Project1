@@ -459,15 +459,16 @@ p {
   .mainNav .hamburgerMenu:checked ~ ul li {
     padding: 1rem 2rem;
   }
-  .mainNav .hamburgerMenu:checked ~ ul li:nth-of-type(3) {
+  .mainNav .hamburgerMenu:checked ~ ul li.logoContainer {
     position: absolute;
     top: 4.5rem;
     left: calc(1rem + 25vw);
   }
-  .mainNav .hamburgerMenu:checked ~ ul li:nth-of-type(3) .logo {
+  .mainNav .hamburgerMenu:checked ~ ul li.logoContainer .logo {
     font-size: calc(4rem + 4vw);
+    display: block;
   }
-  .mainNav .hamburgerMenu:checked ~ ul li:nth-of-type(3) img {
+  .mainNav .hamburgerMenu:checked ~ ul li.logoContainer img {
     display: block;
     position: absolute;
     width: 20%;

@@ -188,13 +188,14 @@ p {
                 padding: 1rem 2rem;
             }
 
-            li:nth-of-type(3) {
+            li.logoContainer {
                 position: absolute;
                 top: 4.5rem;
                 left: calc(1rem + 25vw);
                     
                 .logo {
                     font-size: calc(4rem + 4vw);
+                    display: block;
                 }
 
                 img {

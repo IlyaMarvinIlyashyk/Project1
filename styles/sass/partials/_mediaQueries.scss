@@ -1,0 +1,566 @@
+@media (max-width: 1000px) {
+
+    // GENERAL
+
+    .aboutHeader h1,
+    .blogHeader h1,
+    .contactHeader h1 {
+        bottom: -1.3rem;
+        }
+
+    .wrapper {
+        width: 90%;
+    }
+
+    p {
+        @include fontStyles (0, 3rem);
+
+    }
+
+    button,
+    .homeMainAnchor {
+        padding: 1rem 2rem;
+        margin: 0;
+    }
+
+    // HOME 
+
+    .homeTitleImg img {
+        width: 65%;
+        width: calc(10rem + 15vw);
+    }
+
+    .homeTextMain {
+        margin-bottom: -3%;
+
+    }
+
+    .favouriteThingsImg {
+        padding-left: 12%;
+        align-self: end;
+        
+    }
+
+    .favouriteThingsText {
+        margin: 10% 10% 0 10%;
+        align-self: start;
+    }
+
+    .bucketListText {
+        position: relative;
+        top: 3vw;
+        margin: 0 10% 10% 10%;
+    }
+
+    .bucketListImg {
+        padding-right: 8%;
+        position: unset;
+        align-self: start;
+    }
+
+    .homeTextMain:last-of-type {
+        margin-top: 0;
+        padding: 2% 0 7%;
+
+        .homeWillowsJourney {
+                   
+            img {
+                height: 35%;
+                width: 35%;
+            }
+
+            .journeyText {
+                width: 65%;
+                text-align: left;
+                padding-left: 5%;
+            }
+        }
+    }
+
+    .homeSummary {
+    background-color: $whiteShade;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 5% 0;
+            align-items: center;
+
+            li {
+                flex-basis: 50%;
+
+                p {
+                    padding-left: 3%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 790px) {
+
+    // GENERAL
+    
+    header {
+        margin: 0;
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+
+    .aboutHeader,
+    .blogHeader,
+    .contactHeader {
+        min-height: 45vh;
+    }
+
+    .aboutHeader h1,
+    .blogHeader h1,
+    .contactHeader h1 {
+        bottom: -1.2rem;
+        left: 5%;
+    }
+
+    // NAV 
+
+     .mainNav {
+        position: static;
+        display: flex;
+        background-color: $secondaryGreen;
+        
+        
+        .hamburgerMenu {
+            display: inline;
+            position: relative;
+            width: 6rem;
+            height: 6rem;
+            top: 2%;
+            left: 2%;
+            opacity: 0;
+            z-index: 1;
+            cursor: pointer;
+        }
+        
+        ul {
+            display: none;
+        }
+            
+        .toggleLabel {
+            display: inline-block;
+            position: absolute;
+            font-size: 3rem;
+            top: 1.5rem;
+            left: 2rem;
+        }
+
+        .hamburgerMenu:checked ~ ul {
+            display: inline-block;
+            position: relative;
+                
+            li {
+                padding: 1rem 2rem;
+            }
+
+            .logoContainer {
+                position: absolute;
+                top: 4.5rem;
+                left: calc(1rem + 25vw);
+                    
+                .logo {
+                    font-size: calc(4rem + 4vw);
+                    display: block;
+                }
+
+                img {
+                    display: block;
+                    position: absolute;
+                    width: 20%;
+                    top: 3%;
+                    left: -1%;
+                }
+            }
+        }
+    }
+
+    // HOME
+
+    .homeTitle {
+        height: 45vh;
+        justify-content: center;
+    
+        .homeHeroTitle {
+    
+            img {
+                display: none;
+            }
+        
+            h1 {
+                @include fontStyles (1, x, calc(5rem + 4vw));
+            }
+        }
+
+        .homeTitleImg {
+            align-self: center;
+            top: 0vw;
+            margin-left: 8%;
+            margin-right: 0;
+            background: $primaryGreen;
+
+        }
+
+    }
+
+    .homeGridMain {
+
+        grid-template-columns:100%;
+        row-gap: 0;
+
+        .grid1 {
+            grid-column: unset;
+            grid-row: unset;
+        }
+
+        .grid5 {
+            grid-row-start: 5;
+            grid-row-end: 4;
+        }
+
+        .grid6 {
+            grid-column: unset;
+            grid-row: unset;
+        }    
+    }
+
+    .homeTextMain {
+        margin-bottom: 0;
+    }
+
+    .favouriteThingsImg,
+    .bucketListImg {
+        padding: 0 5%;  
+        margin: 0;
+
+        img {
+            right: 0;
+        }
+    }
+
+    .favouriteThingsText,
+    .bucketListText {
+        position: block;
+        margin: 7% 5%;
+        text-align: center;
+        top: 0;
+    }
+
+    .homeTextMain:last-of-type {
+        padding: 0 0 2%;
+
+        .homeWillowsJourney {
+            display: block;
+        
+            img {
+                margin: 0 auto;
+                height: 50%;
+                width: 50%;
+                box-shadow: 22vw -1vw $secondaryGreen, -22vw -1vw $secondaryGreen;
+                }
+
+            .journeyText {
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+                padding: 5% 0;
+            }
+        }
+    }
+
+    .homeImageGallery {
+        flex-wrap: wrap;
+
+            img {
+                padding: 0 0 2.5% 0;
+                max-width: 100%;
+            }
+
+            img:last-of-type {
+                padding: 0;
+            }
+    }
+
+    .homeSummary ul {
+        padding: 2% 0;
+
+        li {
+            padding: 5% 0;
+
+            h3 {
+                padding-top: 0;
+
+                a:hover,
+                a:focus {
+                    text-decoration: underline;
+                }
+
+            }
+            
+            p {
+                display: none;
+            }
+        }
+    }
+
+    // BLOG
+
+    .blogMain {
+        flex-direction: column;
+        display: grid;
+        grid-template-columns: 100%;
+    }   
+
+    .gridBlog1 {
+        grid-row: 2 / 3;
+    }
+
+    .blogMainAside {
+    flex-basis: unset;
+    margin-right: 0;
+    
+    & > * {
+        margin-bottom: 3%;
+        padding: 3%;
+    }
+    
+    .aboutWillow {
+        display: flex;
+                    
+        .aboutWillowImg {
+            width: 50%;
+        }
+    
+        .aboutWillowText {
+            width: 50%;
+            padding: 0 3%;
+            align-self: center;
+            text-align: center;
+    
+            p {
+                padding-top: 8%;
+            }
+        }
+    }  
+    }
+
+    .recentPosts {
+        text-align: center;
+
+        h4 {
+            margin-bottom: -3%;
+        }
+        
+        ul {
+            display: flex;  
+        
+            li {
+                padding-left: 0%;
+                align-self: baseline;
+
+                a {
+                    margin: 0%;
+                    padding: 0 3%;
+                }
+
+                &:first-of-type a:first-of-type {
+                    margin-top: 0%;
+                }
+            }
+        }
+    }
+
+    .blogMainText {
+        flex-basis: unset;
+    }
+        
+    .blogMainArticle h2 {
+            text-align: center;
+            padding: 3% 0;
+        }
+
+    // CONTACT
+
+    .contactMain {
+        flex-direction: column;
+    }
+    
+    .contactMainAside {
+        flex-basis: unset;
+        margin-right: 0%;
+
+        & > * {
+            padding: 5% 4%;
+            margin: 5% 0;
+
+            & > li {
+
+                text-align: center;     
+                &:first-of-type {
+                    a {
+                        color: $primaryGreen;
+                        padding: 0 4%;
+                        font-size: calc(2rem + 5vw);
+                        &:hover,
+                        &:focus {
+                            color: $secondaryGreen;
+                        }
+                    }
+                }
+                
+                &:nth-of-type(2) { 
+                    padding: 4% 0;
+
+                    a {
+                        color: $black;
+                        font-family: $secondaryFont;
+                        font-weight: bold;
+                        letter-spacing: 0;
+                        font-size: calc(1rem + 2vw);
+                        &:hover,
+                        &:focus {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                
+                &:last-child > * {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 615px) {
+
+    // GENERAL
+
+    .aboutHeader,
+    .blogHeader,
+    .contactHeader {
+        min-height: 50vh;
+    }
+
+    p, 
+    a,
+    button {
+        font-size: calc(1rem + 1.5vw);
+    }
+
+    .blogMainForm > * > *,
+    .contactMainForm >* > * {
+        padding: 2rem;
+    }
+
+    // NAV 
+
+    .mainNav {
+        display: block;
+        
+        .hamburgerMenu:checked ~ ul {
+                display: block;
+                flex-direction: column;
+
+            // .logoContainer {
+            //     top: -17vw;
+            //     left: 19vw;
+            // }
+                    
+                .logo {
+                    font-size: calc(2.5rem + 6vw);
+                }
+            
+        }
+    }
+
+    // HOME
+
+    .homeTitle {
+        height: 60vh;
+        flex-direction: column-reverse;
+        align-items: center;
+    
+        .homeHeroTitle {
+            padding: 5% 0;
+        }
+
+        .homeTitleImg {
+            margin-left: 0;
+            background: $primaryGreen;
+            padding-top: 4rem;
+                
+            img {
+                box-shadow: 1.5vw 1.5vw $whiteShade;
+            }
+        }
+    }
+
+    .homeSummary ul li h3 {
+
+        .fas {
+            width: calc(3rem + 1vw);
+            padding: 0.5rem;
+        }
+
+        a {
+            font-size: calc(1rem + 1.75vw);
+        }
+        
+    }
+
+
+    // BLOG
+  
+    .blogMainAside .aboutWillow {
+        flex-direction: column;
+        align-items: center;
+                    
+        .aboutWillowImg {
+            width: 70%;
+            box-shadow: 5vw 0 $secondaryGreen, -5vw 0 $secondaryGreen;
+        }
+    
+        .aboutWillowText {
+            width: 100%;
+
+            h4 {
+                padding-top: 6%;
+            }
+    
+            p {
+                padding-top: 5%;
+            }
+        }
+    }
+
+    .blogMainComment {
+        flex-direction: column;
+
+        .blogMainCommentImg {
+            align-self: center;
+            width: 35%;
+            padding-right: 0%;
+        }
+
+        .blogMainCommentText p {
+            padding-top: 3%;
+        }
+    }
+
+    .recentPosts ul {
+        flex-direction: column;
+        
+        li {
+            width: 100%;   
+        }
+    }
+}

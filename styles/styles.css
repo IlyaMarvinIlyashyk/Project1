@@ -420,85 +420,6 @@ p {
   color: #e4a436;
 }
 
-@media (max-width: 790px) {
-  header {
-    margin: 0;
-  }
-  .mainNav {
-    position: static;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-color: #709b6b;
-  }
-  .mainNav .hamburgerMenu {
-    display: inline-block;
-    position: relative;
-    width: 6rem;
-    height: 6rem;
-    top: 2%;
-    left: 2%;
-    opacity: 0;
-    z-index: 1;
-    cursor: pointer;
-  }
-  .mainNav ul {
-    display: none;
-  }
-  .mainNav .toggleLabel {
-    display: inline-block;
-    position: absolute;
-    font-size: 3rem;
-    top: 1.5rem;
-    left: 2rem;
-  }
-  .mainNav .hamburgerMenu:checked ~ ul {
-    display: inline-block;
-    position: relative;
-  }
-  .mainNav .hamburgerMenu:checked ~ ul li {
-    padding: 1rem 2rem;
-  }
-  .mainNav .hamburgerMenu:checked ~ ul .logoContainer {
-    position: absolute;
-    top: 4.5rem;
-    left: calc(1rem + 25vw);
-  }
-  .mainNav .hamburgerMenu:checked ~ ul .logoContainer .logo {
-    font-size: calc(4rem + 4vw);
-    display: block;
-  }
-  .mainNav .hamburgerMenu:checked ~ ul .logoContainer img {
-    display: block;
-    position: absolute;
-    width: 20%;
-    top: 3%;
-    left: -1%;
-  }
-}
-
-@media (max-width: 615px) {
-  .mainNav {
-    display: block;
-  }
-  .mainNav .hamburgerMenu:checked ~ ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .mainNav .hamburgerMenu:checked ~ ul .logoContainer {
-    top: -17vw;
-    left: 19vw;
-  }
-  .mainNav .hamburgerMenu:checked ~ ul .logo {
-    font-size: calc(2.5rem + 6vw);
-  }
-}
-
 .aboutHeader,
 .blogHeader,
 .contactHeader {
@@ -1087,19 +1008,73 @@ footer p {
 }
 
 @media (max-width: 790px) {
+  header {
+    margin: 0;
+  }
   .wrapper {
     width: 90%;
   }
   .aboutHeader,
   .blogHeader,
   .contactHeader {
-    height: 45vh;
+    min-height: 45vh;
   }
   .aboutHeader h1,
   .blogHeader h1,
   .contactHeader h1 {
     bottom: -1.2rem;
     left: 5%;
+  }
+  .mainNav {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #709b6b;
+  }
+  .mainNav .hamburgerMenu {
+    display: inline;
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+    top: 2%;
+    left: 2%;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .mainNav ul {
+    display: none;
+  }
+  .mainNav .toggleLabel {
+    display: inline-block;
+    position: absolute;
+    font-size: 3rem;
+    top: 1.5rem;
+    left: 2rem;
+  }
+  .mainNav .hamburgerMenu:checked ~ ul {
+    display: inline-block;
+    position: relative;
+  }
+  .mainNav .hamburgerMenu:checked ~ ul li {
+    padding: 1rem 2rem;
+  }
+  .mainNav .hamburgerMenu:checked ~ ul .logoContainer {
+    position: absolute;
+    top: 4.5rem;
+    left: calc(1rem + 25vw);
+  }
+  .mainNav .hamburgerMenu:checked ~ ul .logoContainer .logo {
+    font-size: calc(4rem + 4vw);
+    display: block;
+  }
+  .mainNav .hamburgerMenu:checked ~ ul .logoContainer img {
+    display: block;
+    position: absolute;
+    width: 20%;
+    top: 3%;
+    left: -1%;
   }
   .homeTitle {
     height: 45vh;
@@ -1329,7 +1304,7 @@ footer p {
   .aboutHeader,
   .blogHeader,
   .contactHeader {
-    min-height: 60vh;
+    min-height: 50vh;
   }
   p,
   a,
@@ -1339,6 +1314,19 @@ footer p {
   .blogMainForm > * > *,
   .contactMainForm > * > * {
     padding: 2rem;
+  }
+  .mainNav {
+    display: block;
+  }
+  .mainNav .hamburgerMenu:checked ~ ul {
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mainNav .hamburgerMenu:checked ~ ul .logo {
+    font-size: calc(2.5rem + 6vw);
   }
   .homeTitle {
     height: 60vh;

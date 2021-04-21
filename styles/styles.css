@@ -1321,7 +1321,7 @@ footer p {
   .aboutHeader,
   .blogHeader,
   .contactHeader {
-    min-height: 50vh;
+    min-height: 60vh;
   }
   p,
   a,
@@ -1333,7 +1333,7 @@ footer p {
     padding: 2rem;
   }
   .homeTitle {
-    height: 55vh;
+    height: 60vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;

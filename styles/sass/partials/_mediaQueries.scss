@@ -13,8 +13,7 @@
     }
 
     p {
-        @include fontStyles (0, 3rem);
-
+        line-height: 3rem;
     }
 
     button,
@@ -26,7 +25,6 @@
     // HOME 
 
     .homeTitleImg img {
-        width: 65%;
         width: calc(10rem + 15vw);
     }
 
@@ -77,24 +75,19 @@
         }
     }
 
-    .homeSummary {
-    background-color: $whiteShade;
+    .homeSummary ul {
+        display: flex;
+        padding: 5% 0;
+        align-items: center;
 
-        ul {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 5% 0;
-            align-items: center;
+        li {
+            flex-basis: 50%;
 
-            li {
-                flex-basis: 50%;
-
-                p {
-                    padding-left: 3%;
-                }
+            p {
+                padding-left: 3%;
             }
         }
-    }
+    } 
 }
 
 @media (max-width: 790px) {
@@ -118,8 +111,15 @@
     .aboutHeader h1,
     .blogHeader h1,
     .contactHeader h1 {
-        bottom: -1.2rem;
+        bottom: -1.3rem;
         left: 5%;
+    }
+
+    button,
+    a,
+    p,
+    .homeMainAnchor {
+        font-size: calc(1.25rem + 1vw);
     }
 
     // NAV 
@@ -131,7 +131,7 @@
         
         
         .hamburgerMenu {
-            display: inline;
+            display: block;
             position: relative;
             width: 6rem;
             height: 6rem;
@@ -147,7 +147,7 @@
         }
             
         .toggleLabel {
-            display: inline-block;
+            display: block;
             position: absolute;
             font-size: 3rem;
             top: 1.5rem;
@@ -155,21 +155,29 @@
         }
 
         .hamburgerMenu:checked ~ ul {
-            display: inline-block;
+            display: block;
             position: relative;
                 
             li {
                 padding: 1rem 2rem;
             }
 
+            li:first-of-type {
+                padding-top: 2rem;
+            }
+
+            li:last-of-type {
+                padding-bottom: 2rem;
+            }
+
             .logoContainer {
                 position: absolute;
-                top: 4.5rem;
+                top: 5.5rem;
                 left: calc(1rem + 25vw);
                     
                 .logo {
                     font-size: calc(4rem + 4vw);
-                    display: block;
+                    // display: block;
                 }
 
                 img {
@@ -186,7 +194,7 @@
     // HOME
 
     .homeTitle {
-        height: 45vh;
+        min-height: 45vh;
         justify-content: center;
     
         .homeHeroTitle {
@@ -196,19 +204,21 @@
             }
         
             h1 {
-                @include fontStyles (1, x, calc(5rem + 4vw));
+                font-size: calc(5rem + 4vw);
             }
         }
 
         .homeTitleImg {
             align-self: center;
             top: 0vw;
-            margin-left: 8%;
+            margin-left: 3%;
             margin-right: 0;
             background: $primaryGreen;
 
+            img {
+                width: calc(10rem + 20vw);
+            } 
         }
-
     }
 
     .homeGridMain {
@@ -248,7 +258,7 @@
 
     .favouriteThingsText,
     .bucketListText {
-        position: block;
+        // position: block;
         margin: 7% 5%;
         text-align: center;
         top: 0;
@@ -276,19 +286,6 @@
         }
     }
 
-    .homeImageGallery {
-        flex-wrap: wrap;
-
-            img {
-                padding: 0 0 2.5% 0;
-                max-width: 100%;
-            }
-
-            img:last-of-type {
-                padding: 0;
-            }
-    }
-
     .homeSummary ul {
         padding: 2% 0;
 
@@ -302,7 +299,6 @@
                 a:focus {
                     text-decoration: underline;
                 }
-
             }
             
             p {
@@ -361,19 +357,24 @@
         
         ul {
             display: flex;  
+
+            li:first-of-type {
+                padding: 0;
+            }
         
             li {
-                padding-left: 0%;
+                padding:0;
+                margin-top: 5rem;
                 align-self: baseline;
 
                 a {
-                    margin: 0%;
-                    padding: 0 3%;
+                    margin: 0;
+                    padding: 0;
                 }
 
-                &:first-of-type a:first-of-type {
-                    margin-top: 0%;
-                }
+                // &:first-of-type a:first-of-type {
+                //     margin-top: 0%;
+                // }
             }
         }
     }
@@ -450,10 +451,11 @@
         min-height: 50vh;
     }
 
-    p, 
-    a,
-    button {
-        font-size: calc(1rem + 1.5vw);
+    .aboutHeader h1,
+    .blogHeader h1,
+    .contactHeader h1 {
+        font-size: calc(4.5rem + 2vw);
+        bottom: -1.1rem;
     }
 
     .blogMainForm > * > *,
@@ -467,17 +469,18 @@
         display: block;
         
         .hamburgerMenu:checked ~ ul {
-                display: block;
-                flex-direction: column;
 
-            // .logoContainer {
-            //     top: -17vw;
-            //     left: 19vw;
-            // }
-                    
+            li:first-of-type {
+                padding-top: 1rem;
+            }
+
+            .logoContainer {
+                top: 2.5rem;
+                            
                 .logo {
                     font-size: calc(2.5rem + 6vw);
                 }
+            }
             
         }
     }
@@ -485,23 +488,37 @@
     // HOME
 
     .homeTitle {
-        height: 60vh;
+        min-height: 60vh;
         flex-direction: column-reverse;
         align-items: center;
     
         .homeHeroTitle {
-            padding: 5% 0;
+            padding-top: 10%;
         }
 
         .homeTitleImg {
             margin-left: 0;
             background: $primaryGreen;
-            padding-top: 4rem;
+            padding-top: 2rem;
                 
             img {
+                width: 25rem;
                 box-shadow: 1.5vw 1.5vw $whiteShade;
             }
         }
+    }
+
+    .homeImageGallery {
+        flex-wrap: wrap;
+
+            img {
+                padding: 0 0 5%;
+                max-width: 100%;
+            }
+
+            img:last-of-type {
+                padding: 0;
+            }
     }
 
     .homeSummary ul li h3 {
@@ -519,7 +536,7 @@
 
 
     // BLOG
-  
+    
     .blogMainAside .aboutWillow {
         flex-direction: column;
         align-items: center;

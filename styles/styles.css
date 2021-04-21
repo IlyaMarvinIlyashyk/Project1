@@ -932,8 +932,6 @@ footer p {
   }
   p {
     line-height: 3rem;
-    letter-spacing: 0;
-    font-size: calc(1rem + 0.75vw);
   }
   button,
   .homeMainAnchor {
@@ -941,7 +939,6 @@ footer p {
     margin: 0;
   }
   .homeTitleImg img {
-    width: 65%;
     width: calc(10rem + 15vw);
   }
   .homeTextMain {
@@ -984,15 +981,10 @@ footer p {
     text-align: left;
     padding-left: 5%;
   }
-  .homeSummary {
-    background-color: #f6f6f6;
-  }
   .homeSummary ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     padding: 5% 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -1022,8 +1014,14 @@ footer p {
   .aboutHeader h1,
   .blogHeader h1,
   .contactHeader h1 {
-    bottom: -1.2rem;
+    bottom: -1.3rem;
     left: 5%;
+  }
+  button,
+  a,
+  p,
+  .homeMainAnchor {
+    font-size: calc(1.25rem + 1vw);
   }
   .mainNav {
     position: static;
@@ -1033,7 +1031,7 @@ footer p {
     background-color: #709b6b;
   }
   .mainNav .hamburgerMenu {
-    display: inline;
+    display: block;
     position: relative;
     width: 6rem;
     height: 6rem;
@@ -1047,27 +1045,32 @@ footer p {
     display: none;
   }
   .mainNav .toggleLabel {
-    display: inline-block;
+    display: block;
     position: absolute;
     font-size: 3rem;
     top: 1.5rem;
     left: 2rem;
   }
   .mainNav .hamburgerMenu:checked ~ ul {
-    display: inline-block;
+    display: block;
     position: relative;
   }
   .mainNav .hamburgerMenu:checked ~ ul li {
     padding: 1rem 2rem;
   }
+  .mainNav .hamburgerMenu:checked ~ ul li:first-of-type {
+    padding-top: 2rem;
+  }
+  .mainNav .hamburgerMenu:checked ~ ul li:last-of-type {
+    padding-bottom: 2rem;
+  }
   .mainNav .hamburgerMenu:checked ~ ul .logoContainer {
     position: absolute;
-    top: 4.5rem;
+    top: 5.5rem;
     left: calc(1rem + 25vw);
   }
   .mainNav .hamburgerMenu:checked ~ ul .logoContainer .logo {
     font-size: calc(4rem + 4vw);
-    display: block;
   }
   .mainNav .hamburgerMenu:checked ~ ul .logoContainer img {
     display: block;
@@ -1077,7 +1080,7 @@ footer p {
     left: -1%;
   }
   .homeTitle {
-    height: 45vh;
+    min-height: 45vh;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1086,8 +1089,6 @@ footer p {
     display: none;
   }
   .homeTitle .homeHeroTitle h1 {
-    line-height: x;
-    letter-spacing: 1;
     font-size: calc(5rem + 4vw);
   }
   .homeTitle .homeTitleImg {
@@ -1095,9 +1096,12 @@ footer p {
         -ms-grid-row-align: center;
         align-self: center;
     top: 0vw;
-    margin-left: 8%;
+    margin-left: 3%;
     margin-right: 0;
     background: #345231;
+  }
+  .homeTitle .homeTitleImg img {
+    width: calc(10rem + 20vw);
   }
   .homeGridMain {
     -ms-grid-columns: 100%;
@@ -1131,7 +1135,6 @@ footer p {
   }
   .favouriteThingsText,
   .bucketListText {
-    position: block;
     margin: 7% 5%;
     text-align: center;
     top: 0;
@@ -1154,17 +1157,6 @@ footer p {
     margin: 0 auto;
     text-align: center;
     padding: 5% 0;
-  }
-  .homeImageGallery {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .homeImageGallery img {
-    padding: 0 0 2.5% 0;
-    max-width: 100%;
-  }
-  .homeImageGallery img:last-of-type {
-    padding: 0;
   }
   .homeSummary ul {
     padding: 2% 0;
@@ -1236,17 +1228,18 @@ footer p {
     display: -ms-flexbox;
     display: flex;
   }
+  .recentPosts ul li:first-of-type {
+    padding: 0;
+  }
   .recentPosts ul li {
-    padding-left: 0%;
+    padding: 0;
+    margin-top: 5rem;
     -ms-flex-item-align: baseline;
         align-self: baseline;
   }
   .recentPosts ul li a {
-    margin: 0%;
-    padding: 0 3%;
-  }
-  .recentPosts ul li:first-of-type a:first-of-type {
-    margin-top: 0%;
+    margin: 0;
+    padding: 0;
   }
   .blogMainText {
     -ms-flex-preferred-size: unset;
@@ -1306,10 +1299,11 @@ footer p {
   .contactHeader {
     min-height: 50vh;
   }
-  p,
-  a,
-  button {
-    font-size: calc(1rem + 1.5vw);
+  .aboutHeader h1,
+  .blogHeader h1,
+  .contactHeader h1 {
+    font-size: calc(4.5rem + 2vw);
+    bottom: -1.1rem;
   }
   .blogMainForm > * > *,
   .contactMainForm > * > * {
@@ -1318,18 +1312,17 @@ footer p {
   .mainNav {
     display: block;
   }
-  .mainNav .hamburgerMenu:checked ~ ul {
-    display: block;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .mainNav .hamburgerMenu:checked ~ ul li:first-of-type {
+    padding-top: 1rem;
   }
-  .mainNav .hamburgerMenu:checked ~ ul .logo {
+  .mainNav .hamburgerMenu:checked ~ ul .logoContainer {
+    top: 2.5rem;
+  }
+  .mainNav .hamburgerMenu:checked ~ ul .logoContainer .logo {
     font-size: calc(2.5rem + 6vw);
   }
   .homeTitle {
-    height: 60vh;
+    min-height: 60vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -1339,16 +1332,28 @@ footer p {
             align-items: center;
   }
   .homeTitle .homeHeroTitle {
-    padding: 5% 0;
+    padding-top: 10%;
   }
   .homeTitle .homeTitleImg {
     margin-left: 0;
     background: #345231;
-    padding-top: 4rem;
+    padding-top: 2rem;
   }
   .homeTitle .homeTitleImg img {
+    width: 25rem;
     -webkit-box-shadow: 1.5vw 1.5vw #f6f6f6;
             box-shadow: 1.5vw 1.5vw #f6f6f6;
+  }
+  .homeImageGallery {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .homeImageGallery img {
+    padding: 0 0 5%;
+    max-width: 100%;
+  }
+  .homeImageGallery img:last-of-type {
+    padding: 0;
   }
   .homeSummary ul li h3 .fas {
     width: calc(3rem + 1vw);

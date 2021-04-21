@@ -453,7 +453,7 @@ p {
     left: 2rem;
   }
   .mainNav .hamburgerMenu:checked ~ ul {
-    display: block;
+    display: inline-block;
     position: relative;
   }
   .mainNav .hamburgerMenu:checked ~ ul li {
@@ -461,8 +461,8 @@ p {
   }
   .mainNav .hamburgerMenu:checked ~ ul .logoContainer {
     position: absolute;
-    top: 10vw;
-    left: 26vw;
+    top: 4.5rem;
+    left: calc(1rem + 25vw);
   }
   .mainNav .hamburgerMenu:checked ~ ul .logoContainer .logo {
     font-size: calc(4rem + 4vw);
@@ -482,12 +482,19 @@ p {
     display: block;
   }
   .mainNav .hamburgerMenu:checked ~ ul {
-    display: inline;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .mainNav .hamburgerMenu:checked ~ ul li:nth-of-type(3) {
-    left: calc(1rem + 10vw);
+  .mainNav .hamburgerMenu:checked ~ ul .logoContainer {
+    top: -17vw;
+    left: 19vw;
   }
-  .mainNav .hamburgerMenu:checked ~ ul li:nth-of-type(3) .logo {
+  .mainNav .hamburgerMenu:checked ~ ul .logo {
     font-size: calc(2.5rem + 6vw);
   }
 }

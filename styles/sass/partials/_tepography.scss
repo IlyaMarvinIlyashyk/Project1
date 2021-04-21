@@ -181,7 +181,7 @@ p {
         }
 
         .hamburgerMenu:checked ~ ul {
-            display: block;
+            display: inline-block;
             position: relative;
                 
             li {
@@ -190,8 +190,8 @@ p {
 
             .logoContainer {
                 position: absolute;
-                top: 10vw;
-                left: 26vw;
+                top: 4.5rem;
+                left: calc(1rem + 25vw);
                     
                 .logo {
                     font-size: calc(4rem + 4vw);
@@ -216,15 +216,18 @@ p {
         display: block;
         
         .hamburgerMenu:checked ~ ul {
-                display: inline;
+                display: flex;
+                flex-direction: column;
 
-            li:nth-of-type(3) {
-                left: calc(1rem + 10vw);
+            .logoContainer {
+                top: -17vw;
+                left: 19vw;
+            }
                     
                 .logo {
                     font-size: calc(2.5rem + 6vw);
                 }
-            }
+            
         }
     }
 }

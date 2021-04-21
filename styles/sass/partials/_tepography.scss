@@ -181,17 +181,17 @@ p {
         }
 
         .hamburgerMenu:checked ~ ul {
-            display: inline-block;
+            display: block;
             position: relative;
                 
             li {
                 padding: 1rem 2rem;
             }
 
-            li.logoContainer {
+            .logoContainer {
                 position: absolute;
-                top: 4.5rem;
-                left: calc(1rem + 25vw);
+                top: 10vw;
+                left: 26vw;
                     
                 .logo {
                     font-size: calc(4rem + 4vw);

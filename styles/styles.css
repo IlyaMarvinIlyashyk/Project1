@@ -453,22 +453,22 @@ p {
     left: 2rem;
   }
   .mainNav .hamburgerMenu:checked ~ ul {
-    display: inline-block;
+    display: block;
     position: relative;
   }
   .mainNav .hamburgerMenu:checked ~ ul li {
     padding: 1rem 2rem;
   }
-  .mainNav .hamburgerMenu:checked ~ ul li.logoContainer {
+  .mainNav .hamburgerMenu:checked ~ ul .logoContainer {
     position: absolute;
-    top: 4.5rem;
-    left: calc(1rem + 25vw);
+    top: 10vw;
+    left: 26vw;
   }
-  .mainNav .hamburgerMenu:checked ~ ul li.logoContainer .logo {
+  .mainNav .hamburgerMenu:checked ~ ul .logoContainer .logo {
     font-size: calc(4rem + 4vw);
     display: block;
   }
-  .mainNav .hamburgerMenu:checked ~ ul li.logoContainer img {
+  .mainNav .hamburgerMenu:checked ~ ul .logoContainer img {
     display: block;
     position: absolute;
     width: 20%;

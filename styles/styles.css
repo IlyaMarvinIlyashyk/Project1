@@ -1419,12 +1419,12 @@ footer p {
             flex-direction: column;
   }
   .recentPosts ul li:first-of-type {
-    padding: 3% 0 0 20%;
+    padding: 3% 0 0 15%;
   }
   .recentPosts ul li {
     margin: 2% 0;
     width: 100%;
-    padding-left: 20%;
+    padding-left: 15%;
     -ms-flex-item-align: baseline;
         align-self: baseline;
   }

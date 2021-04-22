@@ -1067,7 +1067,7 @@ footer p {
   .mainNav .hamburgerMenu:checked ~ ul .logoContainer {
     position: absolute;
     top: 5.5rem;
-    left: calc(1rem + 25vw);
+    left: calc(6rem + 20vw);
   }
   .mainNav .hamburgerMenu:checked ~ ul .logoContainer .logo {
     font-size: calc(4rem + 4vw);
@@ -1158,6 +1158,9 @@ footer p {
     text-align: center;
     padding: 5% 0;
   }
+  .homeImageGallery img {
+    max-height: 300px;
+  }
   .homeSummary ul {
     padding: 2% 0;
   }
@@ -1219,9 +1222,6 @@ footer p {
   }
   .recentPosts {
     text-align: center;
-  }
-  .recentPosts h4 {
-    margin-bottom: -3%;
   }
   .recentPosts ul {
     display: -webkit-box;
@@ -1349,6 +1349,7 @@ footer p {
         flex-wrap: wrap;
   }
   .homeImageGallery img {
+    max-height: unset;
     padding: 0 0 5%;
     max-width: 100%;
   }
@@ -1401,13 +1402,26 @@ footer p {
   .blogMainComment .blogMainCommentText p {
     padding-top: 3%;
   }
+  .recentPosts {
+    text-align: unset;
+  }
+  .recentPosts h4 {
+    text-align: center;
+  }
   .recentPosts ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .recentPosts ul li:first-of-type {
+    padding: 3% 0 0 20%;
+  }
   .recentPosts ul li {
+    margin: 2% 0;
     width: 100%;
+    padding-left: 20%;
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
   }
 }

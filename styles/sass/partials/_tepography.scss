@@ -1,3 +1,4 @@
+
 // GENERAL
 
 html {
@@ -168,7 +169,7 @@ p {
 .blog,
 .contact,
 .about {
-    background-color: $whiteShade;
+    background: $whiteShade;
 }
 
 .blogMain,
@@ -216,7 +217,7 @@ p {
         background: $highlightOrange;
         &:hover,
         &:focus {
-            background-color: $black;
+            background: $black;
         }
     }
 }

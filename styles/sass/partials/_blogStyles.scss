@@ -81,9 +81,10 @@
     }
 }
 
+// BLOG: COMMENT
+
 .blogMainComment {
-    display: flex;
-    justify-content: space-between;
+    @include flex (space-between, x);
     padding: 4%;
     margin-bottom: 3%;
 

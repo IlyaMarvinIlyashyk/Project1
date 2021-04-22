@@ -1,3 +1,6 @@
+
+// MEDIA QUERIES
+
 @media (max-width: 1000px) {
 
     // GENERAL
@@ -30,13 +33,11 @@
 
     .homeTextMain {
         margin-bottom: -3%;
-
     }
 
     .favouriteThingsImg {
         padding-left: 12%;
         align-self: end;
-        
     }
 
     .favouriteThingsText {
@@ -76,9 +77,8 @@
     }
 
     .homeSummary ul {
-        display: flex;
+        @include flex (x, center);
         padding: 5% 0;
-        align-items: center;
 
         li {
             flex-basis: 50%;
@@ -127,7 +127,7 @@
      .mainNav {
         position: static;
         display: flex;
-        background-color: $secondaryGreen;
+        background: $secondaryGreen;
         
         
         .hamburgerMenu {
@@ -257,7 +257,6 @@
 
     .favouriteThingsText,
     .bucketListText {
-        // position: block;
         margin: 7% 5%;
         text-align: center;
         top: 0;
@@ -326,29 +325,29 @@
     flex-basis: unset;
     margin-right: 0;
     
-    & > * {
-        margin-bottom: 3%;
-        padding: 3%;
-    }
-    
-    .aboutWillow {
-        display: flex;
-                    
-        .aboutWillowImg {
-            width: 50%;
+        & > * {
+            margin-bottom: 3%;
+            padding: 3%;
         }
     
-        .aboutWillowText {
-            width: 50%;
-            padding: 0 3%;
-            align-self: center;
-            text-align: center;
-    
-            p {
-                padding-top: 8%;
+        .aboutWillow {
+            display: flex;
+                        
+            .aboutWillowImg {
+                width: 50%;
             }
-        }
-    }  
+        
+            .aboutWillowText {
+                width: 50%;
+                padding: 0 3%;
+                align-self: center;
+                text-align: center;
+        
+                p {
+                    padding-top: 8%;
+                }
+            }
+        }  
     }
 
     .recentPosts {
@@ -399,16 +398,13 @@
 
             & > li {
 
-                text-align: center;     
+                text-align: center;
+
                 &:first-of-type {
+
                     a {
-                        color: $primaryGreen;
                         padding: 0 4%;
                         font-size: calc(2rem + 5vw);
-                        &:hover,
-                        &:focus {
-                            color: $secondaryGreen;
-                        }
                     }
                 }
                 
@@ -416,20 +412,8 @@
                     padding: 4% 0;
 
                     a {
-                        color: $black;
-                        font-family: $secondaryFont;
-                        font-weight: bold;
-                        letter-spacing: 0;
                         font-size: calc(1rem + 2vw);
-                        &:hover,
-                        &:focus {
-                            text-decoration: underline;
-                        }
                     }
-                }
-                
-                &:last-child > * {
-                    margin: 0;
                 }
             }
         }
@@ -476,7 +460,6 @@
                     font-size: calc(2.5rem + 6vw);
                 }
             }
-            
         }
     }
 
@@ -506,15 +489,15 @@
     .homeImageGallery {
         flex-wrap: wrap;
 
-            img {
-                max-height: unset;
-                padding: 0 0 5%;
-                max-width: 100%;
+        img {
+            max-height: unset;
+            padding: 0 0 5%;
+            max-width: 100%;
             }
 
-            img:last-of-type {
-                padding: 0;
-            }
+        img:last-of-type {
+            padding: 0;
+        }
     }
 
     .homeSummary ul li h3 {
@@ -526,10 +509,8 @@
 
         a {
             font-size: calc(1rem + 1.75vw);
-        }
-        
+        }   
     }
-
 
     // BLOG
     
@@ -579,17 +560,18 @@
         ul {
         flex-direction: column;
     
-        li:first-of-type {
-            padding: 3% 0 0 20%;
+            li:first-of-type {
+                padding: 3% 0 0 20%;
+            }
+            
+            li {
+                margin: 2% 0;
+                width: 100%; 
+                padding-left: 20%;  
+                align-self: baseline;
+            }
         }
-        
-        li {
-            margin: 2% 0;
-            width: 100%; 
-            padding-left: 20%;  
-            align-self: baseline;
-        }
-    }}
+    }
 }
 
 

@@ -9,8 +9,8 @@
     color: $color;    
 }
 
-@mixin flex ($justify-content, $align-content) {
+@mixin flex ($justify-content, $align-items) {
     display: flex;
     justify-content: $justify-content;
-    align-content: $align-content;
+    align-items: $align-items;
 }

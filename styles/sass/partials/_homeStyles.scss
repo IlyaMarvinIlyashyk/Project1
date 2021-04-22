@@ -1,16 +1,16 @@
+
 // HOME: HEADER
 
 .homeHeader {
-    background-color: $primaryGreen;
+    background: $primaryGreen;
 }
 
 .homeTitle {
-    @include flex (center, center);
+    @include flex (center, x);
 
     .homeHeroTitle {
 
-        display: flex;
-        align-items: center;
+        @include flex (x, center);
 
         img {
             width: calc(6rem + 3vw);
@@ -29,7 +29,7 @@
 }
 
 .homeTitleImg {
-    background-color: $white;
+    background: $white;
     position: relative;
     top: 3vw;
     margin-left: 6%;
@@ -60,7 +60,7 @@
 }
 
 .homeTextMain {
-    background-color: $whiteShade;
+    background: $whiteShade;
     padding: 4% 0 8%;
     margin-bottom: -5%;
     text-align: center;
@@ -74,10 +74,9 @@
     }
 }
 
-
 .favouriteThingsImg {
     padding-left: calc(15% + 1vw);
-    background-color: $secondaryGreen;
+    background: $secondaryGreen;
 
     img {
         position: relative;
@@ -100,7 +99,7 @@
 
 .bucketListImg {
     padding-right: calc(15% - 1vw);
-    background-color: $primaryGreen;
+    background: $primaryGreen;
     position: relative;
     margin-top: 10%;
     bottom: 2vw;
@@ -117,8 +116,7 @@
     padding: 5% 0 10%;
 
     .homeWillowsJourney {
-    display: flex;
-    align-items: center;
+    @include flex (x, center);
     
         img {
             height: 25%;
@@ -153,13 +151,12 @@
 // HOME: END-SUMMARY
 
 .homeSummary {
-    background-color: $whiteShade;
+    background: $whiteShade;
 
     ul {
-        display: flex;
+        @include flex (x, center);
         flex-wrap: wrap;
         padding: 5% 0;
-        align-items: center;
 
         li {
             flex-basis: 50%;
@@ -175,7 +172,7 @@
     padding-top: 2%;
 
     .fas {
-        background-color: $highlightOrange;
+        background: $highlightOrange;
         padding: 1rem;
         width: calc(4rem + 1vw);
         border-radius: 50%;

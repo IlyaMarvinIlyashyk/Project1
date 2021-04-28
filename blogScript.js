@@ -1,5 +1,6 @@
-
 // BLOG: FORM 
+
+// super messy, spent most of my time on my index page, but WORKS :D
 
 // go ahead, add a comment :D
 

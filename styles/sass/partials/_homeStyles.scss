@@ -156,7 +156,8 @@
         }
         
         img:hover {
-            box-shadow: 0 1px 4px 7px $primaryGreen, 0 6px 4px 0 $primaryGreen;
+            box-shadow: 0 1rem 1rem -1rem $primaryGreen, 0 6px 4px 0 $primaryGreen;
+            transform: scale(1.05);
         }
     }
 }
@@ -223,11 +224,11 @@
 }
 
 .next {
-    right: 30rem;
+    right: 20%;
 }
 
 .previous {
-    left: 30rem;
+    left: 20%;
 }
 
 // HOME: END-SUMMARY

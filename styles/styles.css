@@ -730,8 +730,10 @@ footer p {
 }
 
 .homeImageGallery .galleryContainer img:hover {
-  -webkit-box-shadow: 0 1px 4px 7px #345231, 0 6px 4px 0 #345231;
-          box-shadow: 0 1px 4px 7px #345231, 0 6px 4px 0 #345231;
+  -webkit-box-shadow: 0 1rem 1rem -1rem #345231, 0 6px 4px 0 #345231;
+          box-shadow: 0 1rem 1rem -1rem #345231, 0 6px 4px 0 #345231;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .homeImageGalleryModal {
@@ -808,11 +810,11 @@ footer p {
 }
 
 .next {
-  right: 30rem;
+  right: 20%;
 }
 
 .previous {
-  left: 30rem;
+  left: 20%;
 }
 
 .homeSummary {

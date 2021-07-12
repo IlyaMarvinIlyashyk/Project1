@@ -100,10 +100,53 @@
             <img src="./assets/home-image-5.jpg" alt="A yellow house in the distance, surrounded by rocky fields with yellow flowers.">
         </section>
 
-        <section class="homeImageGallery wrapper">
-            <img src="./assets/home-image-6.jpg" alt="A road in the forest.">
-            <img src="./assets/home-image-7.jpg" alt="A bowl of oranges.">
-            <img src="./assets/home-image-8.jpg" alt="Stairs leading up with an old wooden railing.">
+        <section id="photos" class="homeImageGallery wrapper">
+
+            <div class="galleryContainer">
+                <img src="./assets/home-image-6.jpg" onclick="lightboxApp.currentSlide(1)" alt="A road in the forest.">
+            </div>
+            
+            <div class="galleryContainer">
+                <img src="./assets/home-image-7.jpg" onclick="lightboxApp.currentSlide(2)" alt="A bowl of oranges.">
+            </div>
+           
+            <div class="galleryContainer">
+                <img src="./assets/home-image-8.jpg" onclick="lightboxApp.currentSlide(3)" alt="Stairs leading up with an old wooden railing.">
+            </div>
+
+        </section>
+
+        <section class="homeImageGalleryModal" id="lightbox">
+            
+            <span class="close" id="close">&times;</span>
+           
+            <div class="modalContent">
+                <div class="galleryContainerSlide">
+                    <img src="./assets/home-image-6.jpg" alt="A road in the forest.">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit!</p>
+                </div>
+                <div class="galleryContainerSlide">
+                    <img src="./assets/home-image-7.jpg" alt="A bowl of oranges.">
+                    <p>Numquam ipsam impedit quis amet. Cupiditate, consectetur ullam.</p>
+                </div>
+                <div class="galleryContainerSlide">
+                    <img src="./assets/home-image-8.jpg" alt="Stairs leading up with an old wooden railing.">
+                    <p>Qui, ipsa velit quos illum numquam ullam distinctio vero delectus necessitatibus aliquam.</p>
+                </div>
+                <div class="galleryContainerSlide">
+                    <img src="./assets/home-image-2.jpg" alt="An old stone bridge in a forrest, with a waterfall in the background.">
+                    <p>Hic, minima. Dolore vero maxime consectetur laudantium, iusto?</p>
+                </div>
+                <div class="galleryContainerSlide">
+                    <img src="./assets/home-image-3.jpg" alt="An orchid floating in the water.">
+                    <p>Magnam numquam voluptas ut illo natus expedita illum!</p>
+                </div>
+
+            </div>
+
+            <a class="next" onclick="lightboxApp.changeSlide(1)">&#10095;</a>
+            <a class="previous" onclick="lightboxApp.changeSlide(-1)">&#10094;</a>
+
         </section>
 
         <section class="homeSummary">
@@ -149,6 +192,8 @@
         </footer>
 
     </main>
+
+    <script src="./indexScript.js"></script>
     
 </body>
 </html>

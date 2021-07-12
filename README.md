@@ -1,4 +1,4 @@
-# Project1 for Juno College 2021
+# Client PSD conversion for Juno College 2021
 
 UPDATED: 
 

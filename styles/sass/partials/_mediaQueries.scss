@@ -487,17 +487,37 @@
     }
 
     .homeImageGallery {
-        flex-wrap: wrap;
+        flex-direction: column;
 
-        img {
-            max-height: unset;
-            padding: 0 0 5%;
-            max-width: 100%;
+        .galleryContainer {
+            padding: 2.5% 0;
+
+            img {
+                max-height: unset;
             }
-
-        img:last-of-type {
-            padding: 0;
         }
+    }
+
+    .modalContent {
+        width: 70%;
+    }
+
+    .previous,
+    .next {
+        color: $white;
+        position: absolute;
+        top: 75%;
+        padding: 2rem;
+        font-size: 5rem;
+        cursor: pointer;
+    }
+
+    .next {
+        transform: translateX(-8rem);
+    }
+
+    .previous {
+        transform: translateX(8rem);
     }
 
     .homeSummary ul li h3 {
@@ -536,17 +556,13 @@
         }
     }
 
-    .blogMainComment {
+    .blogMainComment li {
         flex-direction: column;
 
-        .blogMainCommentImg {
+        img {
             align-self: center;
             width: 35%;
-            padding-right: 0%;
-        }
-
-        .blogMainCommentText p {
-            padding-top: 3%;
+            padding: 0 0 3% 0;
         }
     }
 

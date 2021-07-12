@@ -1,11 +1,5 @@
 // HOME: LIGHTBOX 
 
-// Overall, I found making a lightbox was pretty challenging. 
-// But, with the help of feeCodeCamp and W3 Schools, this is what i came up with!
-// freeCodeCamp ➡ https://www.freecodecamp.org/news/how-to-create-a-lightbox-using-html-css-and-javascript/
-// W3 Schools ➡ https://www.w3schools.com/howto/howto_js_lightbox.asp
-// tried to use everything we learned today on javascript organzing, still pretty messy, but WORKS :D
-
 lightboxApp = {}
 
 lightboxApp.init = () => {

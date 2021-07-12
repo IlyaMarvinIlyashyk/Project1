@@ -140,11 +140,11 @@
     justify-content: center;
     
     .galleryContainer {
-        display: flex;
-        justify-content: space-between;
+        // display: flex;
+        // justify-content: space-between;
         padding-right: 2.5%;
-        max-width: calc(100%/ 3);
-        flex-grow: 1;
+        // max-width: calc(100%/ 3);
+        // flex-grow: 1;
         
         &:last-of-type {
             padding-right: 0;
@@ -202,8 +202,7 @@
     font-weight: bold;
     cursor: pointer;
 
-    &:hover,
-    &:focus {
+    &:hover {
         color: $secondaryGreen;
     }
 }

@@ -1,40 +1,31 @@
 // BLOG: FORM 
 
-// super messy, spent most of my time on my index page, but WORKS :D
-
 // go ahead, add a comment :D
 
 const blogForm = document.querySelector('form.blogMainForm');
-
-let list = document.querySelector('ul.blogMainComment');
+const list = document.querySelector('ul.blogMainComment');
 
 blogForm.addEventListener('submit', function (event) {
 
     const comment = document.getElementById('comment');
-    const commentValue = comment.value;
-    console.log(commentValue);
-
     const name = document.getElementById('name');
-    const nameValue = name.value;
-
     const email = document.getElementById('email');
-    const emailValue = email.value;
 
-    let today = new Date().toDateString();
+    const today = new Date().toDateString();
 
-    if (commentValue) {
+    if (comment.value) {
         event.preventDefault();
 
-        let newListItem = document.createElement('li');
+        const newCommentItem = document.createElement('li');
 
-        newListItem.innerHTML = `
+        newCommentItem.innerHTML = `
             <img src="./assets/blank-profile.webp" alt="User Photo">
                 <div class="commentText">
-                    <p>${today} by ${nameValue}</p>
-                    <p>${commentValue}</p>
+                    <p><strong>${today} by ${name.value}</strong></p>
+                    <p>${comment.value}</p>
                 </div>`
 
-        list.appendChild(newListItem);
+        list.appendChild(newCommentItem);
 
         comment.value = "";
         name.value = "";

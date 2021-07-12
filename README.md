@@ -2,5 +2,5 @@
 
 UPDATED: 
 
-1. Functionality to add comments in the BLOG section
-2. Gallery carousel added to the home page (still needs work)
+1. Added functionality to write and append comments in the BLOG section
+2. Added working gallery carousel to the home page (still needs tweaking)
